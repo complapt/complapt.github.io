@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Team Profile</title>
+
+    <!-- fonts --> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body> 
+    
+    <!-- navbar -->
+<nav class="navbar">
+<a href="#" 
+class="navbar-satu">2023B<span> KELOMPOK 7</span></a>
+
+<div class="navbar-nav">
+    <a href="#">Home</a>
+    <a href="#about">Tentang Kami</a>
+    <a href="#our_team">Team</a>
+    <a href="#support">Support</a>
+</div>
+
+</nav>
+    <!-- navbar akhir -->
+    
+    <!-- home -->
+<section class="hero" id="home">
+    <main class="content">
+        <h1>Anggota</h1>
+            <h1><span> Kelompok 7</span></h1>
+    <ol>
+        <li>Mochammad Irfansyah Ma'arif / 23091397066</li>
+        <li>Rafi Dwi Saputra / 23091397058</li>
+        <li>Yusuf Affandi / 23091397045</li>
+    </ol>
+    </main>
+</section>
+
+<!-- tentang kami -->
+<section id="about" class="about">
+    <h2><span>Tentang</span> Kami</h2>
+
+    <div class="row">
+        <div class="about-img">
+            <img src="gambartim.jpg" alt="Tentang Kami">
+        </div>
+        <div class="content">
+            <h3>Siapa Kami ?</h3>
+            <p>
+                Kami adalah tim yang berdedikasi dalam menciptakan kolaborasi internal yang kuat dan efektif. Melalui kerja sama yang solid, kami tidak hanya meningkatkan sinergi antar anggota, tetapi juga membangun personal branding yang profesional dan terpercaya. Dengan visi untuk terus tumbuh dan berkembang, kami berkomitmen untuk memberikan kontribusi terbaik demi meningkatkan kepercayaan dan mencapai kesuksesan bersama.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Team section -->
+
+<section id="our_team" class="our_team">
+    <h2><span>Team</span> Kami</h2>
+    <p>
+        Tim kami masih memiliki 3 anggota .
+    </p>
+
+    <div class="row">
+        <div class="team-card">
+            <img src="yusufcr.jpg" alt="yusuf" class="team-card-img">
+            <h3 class="team-card-title"> Yusuf </h3>
+            <p class="team-card-nim">23091397045</p>
+        </div>
+        <div class="team-card">
+            <img src="irfan3.jpg" alt="irfan" class="team-card-img">
+            <h3 class="team-card-title"> Irfan </h3>
+            <p class="team-card-nim">23091397066</p>
+        </div>
+        <div class="team-card">
+            <img src="rapi2.jpg" alt="rapi" class="team-card-img">
+            <h3 class="team-card-title"> Rafi </h3>
+            <p class="team-card-nim">23091397058</p>
+        </div>
+    </div>
+</section>
+
+<!-- Kontak kami -->
+<section id="support" class="support">
+    <h2><span>Bantuan</span> Pelanggan</h2>
+    <p>
+        jika ada kendala tau saran yang ingin dismpaikan untuk website ini silahkan. Terima Kasih
+    </p>
+    <div class="container">
+        <form>
+            <!-- First Name -->
+            <h3 for="fname">First Name</h3>
+            <input type="text" id="fname" name="firstname" placeholder="Your First Name.." required>
+
+            <!-- Last Name -->
+            <h3 for="lname">Last Name</h3>
+            <input type="text" id="lname" name="lastname" placeholder="Your Last Name.." required>
+
+            <!-- Subject -->
+            <h3 for="subject">Subject</h3>
+            <input type="text" id="subject" name="subject" placeholder="Subject.." required>
+
+            <!-- Body -->
+            <h3 for="body">Body</h3>
+            <textarea id="body" name="body" placeholder="Write something.." style="height:200px" required></textarea>
+            
+            <!-- Submit Button -->
+            <input type="button" value="Submit" onclick="sendEmail()">
+        </form>
+    </div>
+
+    <script>
+    function sendEmail() {
+        // Ambil nilai dari form
+        var firstName = document.getElementById('fname').value;
+        var lastName = document.getElementById('lname').value;
+        var subject = document.getElementById('subject').value;
+        var body = document.getElementById('body').value;
+
+        // Gabungkan firstName dan lastName ke dalam body jika perlu
+        var fullBody = "Nama: " + firstName + " " + lastName + "\n\n" + body;
+
+        // Buat mailto link
+        var email = 'metaslide23@gmail.com';
+        var mailtoLink = 'mailto:' + email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(fullBody);
+
+        // Redirect ke mailto
+        window.location.href = mailtoLink;
+    }
+    </script>
+</body>
+</html>
